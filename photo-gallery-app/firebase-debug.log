@@ -1,19 +1,43 @@
-[debug] [2023-06-19T23:07:47.233Z] ----------------------------------------------------------------------
-[debug] [2023-06-19T23:07:47.235Z] Command:       /home/gitpod/.nvm/versions/node/v18.16.0/bin/node /home/gitpod/.nvm/versions/node/v18.16.0/bin/firebase login
-[debug] [2023-06-19T23:07:47.235Z] CLI Version:   12.4.0
-[debug] [2023-06-19T23:07:47.236Z] Platform:      linux
-[debug] [2023-06-19T23:07:47.236Z] Node Version:  v18.16.0
-[debug] [2023-06-19T23:07:47.236Z] Time:          Mon Jun 19 2023 23:07:47 GMT+0000 (GMT)
-[debug] [2023-06-19T23:07:47.236Z] ----------------------------------------------------------------------
+[debug] [2023-06-20T00:30:21.177Z] ----------------------------------------------------------------------
+[debug] [2023-06-20T00:30:21.179Z] Command:       /home/gitpod/.nvm/versions/node/v18.16.0/bin/node /home/gitpod/.nvm/versions/node/v18.16.0/bin/firebase init
+[debug] [2023-06-20T00:30:21.179Z] CLI Version:   12.4.0
+[debug] [2023-06-20T00:30:21.180Z] Platform:      linux
+[debug] [2023-06-20T00:30:21.180Z] Node Version:  v18.16.0
+[debug] [2023-06-20T00:30:21.180Z] Time:          Tue Jun 20 2023 00:30:21 GMT+0000 (GMT)
+[debug] [2023-06-20T00:30:21.180Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2023-06-19T23:07:47.238Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
-[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
- 
-[debug] [2023-06-19T23:07:47.500Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
-[debug] [2023-06-19T23:07:47.500Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
-[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[debug] [2023-06-20T00:30:21.185Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-06-20T00:30:21.186Z] > authorizing via signed-in user (solomonkababu@gmail.com)
 [info] 
-[info] Visit this URL on this device to log in:
-[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=932571048&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /workspace/Web.React/photo-gallery-app
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
 [info] 
-[info] Waiting for authentication...
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2023-06-20T00:31:03.747Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2023-06-20T00:31:03.747Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"mutua_solomon-photo-gallery","name":"mutua_solomon-photo-gallery"}
+[debug] [2023-06-20T00:31:04.460Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 400
+[debug] [2023-06-20T00:31:04.460Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":400,"message":"Request contains an invalid argument.","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"project_id contains invalid characters"},{"field":"display_name","description":"project display name contains invalid characters"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2023-06-20T00:31:04.478Z] FirebaseError: HTTP Error: 400, Request contains an invalid argument.
+    at responseToError (/home/gitpod/.nvm/versions/node/v18.16.0/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/home/gitpod/.nvm/versions/node/v18.16.0/lib/node_modules/firebase-tools/lib/apiv2.js:288:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
